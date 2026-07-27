@@ -1,0 +1,101 @@
+:root {
+    --bg-primary: #16171d;
+    --bg-secondary: #1e1f26;
+    --bg-tertiary: #26272e;
+    --bg-hover: #2e2f38;
+    
+    /* Текст */
+    --text-primary: #ffffff;
+    --text-secondary: #a0a3b8;
+    --text-tertiary: #6b6f84;
+    --text-muted: #45485e;
+    
+    /* Акцентные цвета */
+    --accent-primary: #6c5ce7;
+    --accent-primary-hover: #7d6ff0;
+    --accent-secondary: #a29bfe;
+    --accent-gradient: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    
+    /* Успех/Ошибка/Предупреждение */
+    --success: #00b894;
+    --success-bg: rgba(0, 184, 148, 0.15);
+    --error: #ff6b6b;
+    --error-bg: rgba(255, 107, 107, 0.15);
+    --warning: #fdcb6e;
+    --warning-bg: rgba(253, 203, 110, 0.15);
+    --info: #74b9ff;
+    --info-bg: rgba(116, 185, 255, 0.15);
+    
+    /* Границы и разделители */
+    --border-color: #2e2f38;
+    --border-light: #363741;
+    
+    /* Тени */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px rgba(108, 92, 231, 0.3);
+    
+    /* Скругления */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    
+    /* Шрифты */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+}
+
+.success {
+  color: var(--success);
+  background-color: var(--success-bg);
+} 
+
+.error {
+  color: var(--error);
+  background-color: var(--error-bg);
+}
+
+.info {
+  color: var(--info);
+  background-color: var(--info-bg);
+}

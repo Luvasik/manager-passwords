@@ -1,0 +1,31 @@
+.header {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 20px;
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.link_btn {
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 8px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.h3 {
+    color: var(--text-primary);
+}

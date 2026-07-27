@@ -1,0 +1,4 @@
+.add:hover {
+    background-color: var(--bg-hover);
+    color: var(--accent-primary-hover);
+}
