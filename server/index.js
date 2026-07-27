@@ -8,10 +8,12 @@ import { passwordRouter } from "./routes/passwordRoutes.js";
 import "dotenv/config"
 
 const PORT = process.env.PORT || 3000;
+const DB_PATH = process.env.DB_PATH || "./password-manager.db";
+const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173"
 
 const app = express();
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: CLIENT_URL,
     credentials: true
 }));
 app.use(express.json());
@@ -19,7 +21,7 @@ app.use(cookieParser());
 app.use("/api/users", userRouter);
 app.use("/api/passwords", authMiddleware, passwordRouter);
 
-export const db = new sqlite.Database("./password-manager.db", (err) => {
+export const db = new sqlite.Database(DB_PATH, (err) => {
     if (err) console.log(err);
     else console.log("Подключено к БД");
 });
